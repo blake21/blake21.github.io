@@ -1,6 +1,42 @@
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <title>cssanim.html</title>
     <h1>CSS3 Animations</h1>
+      <style> 
+        div {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+          -webkit-animation-name: example; /* Chrome, Safari, Opera */
+          -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+          animation-name: example;
+          animation-duration: 4s;
+        }
+
+/* Chrome, Safari, Opera */
+    @-webkit-keyframes example {
+      from {background-color: red;}
+      to {background-color: yellow;}
+    }
+
+/* Standard syntax */
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+</style>
   </head>
+  <body>
+    <h2>CSS3 Animations Definition:</h2>
+    <p>An animation lets an element gradually change from one style to another.</p>
+    <p>You can change as many CSS properties you want, as many times you want.</p>
+    <p>To use CSS3 animation, you must first specify some keyframes for the animation.</p>
+    <p>Keyframes hold what styles the element will have at certain times.</p>
+    
+    <h2>CSS3 Animation Example</h2>
+    <div></div>
+  </body>
 </html>
