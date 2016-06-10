@@ -1,6 +1,39 @@
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <title>ajax.html</title>
     <h1>AJAX Demo</h1>
   </head>
+  <body>
+    <h2>AJAX Definition</h2>
+    <p>AJAX stands for Asynchronis Javascript And XML</p>
+    <p>AJAX can:<br>
+    \tUpdate a web page without reloading the page<br>
+    \tRequest data from a server - after the page has loaded<br> 
+    \tReceive data from a server - after the page has loaded<br>
+    \tSend data to a server - in the background</p>
+    <h2>AJAX Example</h2>
+    <h3>AJAX HTML setup</h3>
+    <p><!DOCTYPE html><br>
+      <html><br>
+      <body><br>
+      <div id="demo"><h2>Let AJAX change this text</h2></div><br>
+      <button type="button" onclick="loadDoc()">Change Content</button><br>
+      </body><br>
+      </html></p>
+    <h2>AJAX JavaScript function example</h2>
+    <p>function loadDoc() {<br>
+      var xhttp = new XMLHttpRequest();<br>
+      xhttp.onreadystatechange = function() {<br>
+      \tif (xhttp.readyState == 4 && xhttp.status == 200) {<br>
+      \tdocument.getElementById("demo").innerHTML = xhttp.responseText;<br>
+      \t}<br>
+      };<br>
+      xhttp.open("GET", "ajax_info.txt", true);<br>
+      xhttp.send();<br>
+      }</p>
+    
+  </body>
 </html>
