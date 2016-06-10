@@ -16,20 +16,20 @@
     \tSend data to a server - in the background</p>
     <h2>AJAX Example</h2>
     <h3>AJAX HTML setup</h3>
-    <p><!DOCTYPE html><br>
-      <html><br>
-      <body><br>
-      <div id="demo"><h2>Let AJAX change this text</h2></div><br>
-      <button type="button" onclick="loadDoc()">Change Content</button><br>
-      </body><br>
-      </html></p>
+    <p><!DOCTYPE html></p>
+    <p><html></p>
+    <p><body></p>
+    <p><div id="demo"><h2>Let AJAX change this text</h2></div></p>
+    <p><button type="button" onclick="loadDoc()">Change Content</button></p>
+    <p></body></p>
+    <p></html></p>
     <h2>AJAX JavaScript function example</h2>
     <p>function loadDoc() {<br>
       var xhttp = new XMLHttpRequest();<br>
       xhttp.onreadystatechange = function() {<br>
-      \tif (xhttp.readyState == 4 && xhttp.status == 200) {<br>
-      \tdocument.getElementById("demo").innerHTML = xhttp.responseText;<br>
-      \t}<br>
+      /tif (xhttp.readyState == 4 && xhttp.status == 200) {<br>
+      /tdocument.getElementById("demo").innerHTML = xhttp.responseText;<br>
+      /t}<br>
       };<br>
       xhttp.open("GET", "ajax_info.txt", true);<br>
       xhttp.send();<br>
