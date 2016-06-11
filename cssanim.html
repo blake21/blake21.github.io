@@ -5,36 +5,24 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <title>cssanim.html</title>
     <h1>CSS3 Animations</h1>
-      <style> 
-        div {
-          width: 100px;
-          height: 100px;
-          background-color: red;
-          -webkit-animation-name: example; /* Chrome, Safari, Opera */
-          -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
-          animation-name: example;
-          animation-duration: 4s;
-          animation-iteration-count: infinite;
-        }
+    <style> 
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
 
-/* Chrome, Safari, Opera */
-    @-webkit-keyframes example {
-       0%   {background-color:red;}
-      25%  {background-color:yellow;}
-      50%  {background-color:blue;}
-      75%  {background-color:green;}
-      100% {background-color:red;}
-    }
-
-/* Standard syntax */
-@keyframes example {
-  0%   {background-color:red;}
-  25%  {background-color:yellow;}
-  50%  {background-color:blue;}
-  75%  {background-color:green;}
-  100% {background-color:red;}
-}
-</style>
+      @keyframes example {
+        0%   {background-color:red;}
+        25%  {background-color:yellow;}
+        50%  {background-color:blue;}
+        75%  {background-color:green;}
+        100% {background-color:red;}
+      }
+    </style>
   </head>
   <body>
     <h2>CSS3 Animations Definition:</h2>
@@ -45,5 +33,26 @@
     
     <h2>CSS3 Animation Example</h2>
     <div></div>
+    <h2>Other Animation Effects</h2>
+    <p>animation-direction: reverse;</p>
+    <h3>Specify the Speed of your animation</h3>
+    <p>ease - specifies an animation with a slow start, then fast, then end slowly (this is default)</p>
+    <p>linear - specifies an animation with the same speed from start to end</p>
+    <p>ease-in - specifies an animation with a slow start</p>
+    <p>ease-out - specifies an animation with a slow end</p>
+    <p>ease-in-out - specifies an animation with a slow start and end</p>
+    <p>cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function</p>
+    <h2>CSS3 Animation Properties</h2>
+    <p>@keyframes	Specifies the animation code</p>
+    <p>animation	A shorthand property for setting all the animation properties</p>
+    <p>animation-delay	Specifies a delay for the start of an animation</p>
+    <p>animation-direction	Specifies whether an animation should play in reverse direction or alternate cycles</p>
+    <p>animation-duration	Specifies how many seconds or milliseconds an animation takes to complete one cycle</p>
+    <p>animation-fill-mode	Specifies a style for the element when the animation is not playing 
+    (when it is finished, or when it has a delay)</p>
+    <p>animation-iteration-count	Specifies the number of times an animation should be played</p>
+    <p>animation-name	Specifies the name of the @keyframes animation</p>
+    <p>animation-play-state	Specifies whether the animation is running or paused</p>
+    <p>animation-timing-function	Specifies the speed curve of the animation</p>
   </body>
 </html>
