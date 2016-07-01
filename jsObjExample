@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<h1>SportsCars.com</h1>
+<h2><font color="red">The greatest car franchise in the world!</font></h2>
+<h3>Select the car you would like to purchase(Only select one)</h3>
+</head>
+<body style="background-color:lightgrey;">
+<input type="checkbox" id="car1">
+Muscle Car #1 <img src="http://www.brimg.net/images/slideshows/auto/2014/best
+-american-muscle-cars-of-all-time/1-intro.jpg"
+ alt="HTML5 Icon" style="width:240px;height:128px;"><br> 
+
+<input type="checkbox" id="car2">
+Tuner car #2 <img src="http://4.bp.blogspot.com/-DCCFob6s3ek/
+UIsmTBpqK_I/AAAAAAAJv1Q/LrKMgWL_L3Y/s1600/2012-SEMA-Scion-FR-S-7.jpg"
+ alt="HTML5 Icon" style="width:240px;height:128px;"><br> 
+
+<input type="checkbox" id="car3">
+Exotic car #3 <img src="https://s-media-cache-ak0.pinimg.com/564x/5b
+/c7/03/5bc703f291e0e1ba10ba4bb9c9021e96.jpg"
+ alt="HTML5 Icon" style="width:180px;height:128px;"><br> 
+
+<input type="checkbox" id="batMobile">
+BatMobile <img src="http://nerdbastards.com/wp-content/uploads/2014/09/
+Evolution-of-Batmobile-05.jpg"
+ alt="HTML5 Icon" style="width:240px;height:128px;"><br><br>
+<h3>Please fill out purchase form.(Submit when finished)</h3> 
+
+<script>
+function cars() {
+var muscleCar = {type:"Muscle Car", price:"$50,000", shipping:"$10,000", tax:"$3,000"}
+var tunerCar = {type:"Tuner Car", price:"$120,000", shipping:"$10,000", tax:"$7,200"}
+var exoticCar = {type:"Exotic Car", price:"$100,000", shipping:"$10,000", tax:"$6,000"}
+var batmobile = {type:"BatMobile", price:"$500,000", shipping:"$25,000", tax:"$30,000"}
+
+var muscleCheck = document.getElementById("car1");
+var tunerCheck = document.getElementById("car2");
+var ExoticCheck = document.getElementById("car3");
+var BatMobileCheck = document.getElementById("batMobile");
+var total = 0;
+
+  if(car1.checked) {
+  window.alert("Purchase: " + muscleCar.type + "\n" + 
+  "Price: " + muscleCar.price + "\n" + 
+  "Tax:" + muscleCar.tax + "\n" + 
+  "Shipping: " + muscleCar.shipping + "\n" +
+  "Total: $63,000\n" + "Press Okay to confirm your purchase.");
+  }
+  if(car2.checked) {
+  window.alert("Purchase: " + tunerCar.type + "\n" +
+  "Price: " + tunerCar.price + "\n" + 
+  "Tax: " + tunerCar.tax + "\n" + 
+  "Shipping: " + tunerCar.shipping + "\n" +
+  "Total: $137,200\n" + " Press okay to confirm your purchase.");
+  }
+  if(car3.checked) {
+  window.alert("Purchase: " + exoticCar.type + "\n" + 
+  "Price: " + exoticCar.price + "\n" +
+  "Tax: " + exoticCar.tax + "\n" + 
+  "Shipping: " + exoticCar.shipping + "\n" + 
+  "Total: $116,000\n" + " Press okay to confirm your purchase.");
+  }
+  if(batMobile.checked) {
+  window.alert("Purchase: " + batmobile.type + "\n" + 
+  "Price: " + batmobile.price + "\n" + 
+  "Tax: " + batmobile.tax + "\n" + 
+  "Shipping: " + batmobile.shipping + "\n" +
+  "Total: $555,000\n" + "Press okay to confirm your purcahse.");
+  }
+
+}
+</script>
+
+<form  action="submitweek07.html" onsubmit="cars()">
+First Name:<input type="text" id="idFirst"><br>
+Last Name:<input type="text" id="idLast"><br>
+Address:<input type="text" id="idAddress"><br>
+Phone Number:<input type="text" id="idPhoneNum"><br><br>
+
+Credit Card Type<input type="text" id="idCCtype"><br>
+Credit Card Number:<input type="text" id="idCC"><br>
+Credit Card Expiration date:<input type="text" id="idCCexpire"><br>
+<input type="reset" value="Reset">
+<input type="submit" value="Submit">
+</form>
+<p id="display"></p>
+</body>
+</html>
