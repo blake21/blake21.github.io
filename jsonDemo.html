@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>JSON Demo</title>
+  </head>
+  <body>
+    <h1>JSON demo</h1><br>
+    <p>This webpage is displaying a JSON file called json.js. (This file can be viewed on my github)</p>
+    <!--<button onclick="jsonParse(myArray)">Display JSON</button>-->
+    <div id="id1"></div>
+    <script>
+      function jsonParse(arr){
+        var out = "";
+        var i;
+        for(i = 0; i<arr.length; i++) {
+          out += "Name: " + arr[i].first + " " + arr[i].last + "<br>" +
+                 "GPA: " + arr[i].gpa + "<br>" +
+                 "Major: " + arr[i].major + "<br><br>";
+        }
+        document.getElementById("id1").innerHTML = out;
+      }
+    </script>
+    <script src="json.js"></script>
+  </body>
+</html>
