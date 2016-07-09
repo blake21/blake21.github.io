@@ -37,5 +37,29 @@
     <p>xhttp.send();</p>
     <p>}</p>
     
+    <div id="demo"><h2>Part #1: Display Cities</h2></div>
+    <h3>Choose a country:</h3>
+    <select id="country">
+      <option value="usa.txt">US</option>
+      <option value="mexico.txt">Mexico</option>
+      <option value="canada.txt">Canada</option>
+      <option value="russia.txt">Russia</option>
+    </select><br>
+    <button type="button" onclick="loadDoc()">Display Country's Cities</button>
+    <p id="part1"></p>
+    <script>
+      function loadDoc() {
+        var file = document.getElementById("country").value;
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (xhttp.readyState == 4 && xhttp.status == 200) {
+            document.getElementById("part1").innerHTML = xhttp.responseText;
+          }
+        };
+        xhttp.open("GET", file, true);
+        xhttp.send();
+      }
+    </script>
+
   </body>
 </html>
