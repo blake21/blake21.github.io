@@ -20,17 +20,17 @@
     <p>innerHTML is a property.</p>
     
     <h2>DOM Manipulation Example</h2>
-    <div>id="id1"</div>
+    <div id="id1"></div>
     <script>
       function()
       {
-        document.getElementById("first").value;
+        document.getElementById("id1").innerHTML = document.getElementById("first").value;
       }
     </script>
-    <form action="function()">
+    
       First name:<input id="first" type="text" name="firstname"><br>
       Last name:<input id="last" type="text" name="lastname"><br>
       <button onclick="function()">Display Data using Dom Manipulation</button> 
-    </form>
+    
   </body>
 </html>
