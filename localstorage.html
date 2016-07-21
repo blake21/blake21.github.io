@@ -14,15 +14,20 @@
       Last Name: <input type="text" id="last" value="Taylor"><br>
       Age: <input type="text" id="age" value="24"><br>
       Favorite Color: <input type="text" id="color" value="Blue"><br>
-      <button onclick="storeIt()">Store the data</button>
+      
      <p id="result"></p>
       <script>
         storeIt(){
           if (typeof(Storage) !== "undefined") {
-      
-          localStorage.setItem("lastname", "Smith");
-        
-          document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+          var first = document.getElementById("first").value;
+          var last = document.getElementById("last").value;
+          var age = document.getElementById("age").value;
+          
+          localStorage.setItem("lastname", "smith");
+          localStorage.setItem("first", first);
+          localStorage.setItem("last", last);
+          localStorage.setItem("age", age);
+          document.getElementById("result").innerHTML = localStorage.getItem("lastname") + localSorage.getItem("first");
           } else {
           document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
           }
