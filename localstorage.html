@@ -25,10 +25,10 @@
           //var age = document.getElementById("age").value;
           
           localStorage.setItem("lastname", "smith");
-          //localStorage.setItem("first", "first");
+          localStorage.setItem("first", "first");
           //localStorage.setItem("last", last);
           //localStorage.setItem("age", age);
-          document.getElementById("result").innerHTML = localStorage.getItem("lastname");// + localStorage.getItem("first");
+          document.getElementById("result").innerHTML = localStorage.getItem("lastname") + localStorage.getItem("first");
           } else {
           document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
           }
