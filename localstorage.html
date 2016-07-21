@@ -14,16 +14,18 @@
       Last Name: <input type="text" id="last" value="Taylor"><br>
       Age: <input type="text" id="age" value="24"><br>
       Favorite Color: <input type="text" id="color" value="Blue"><br>
+      <button onclick="storeIt()">Store the data</button>
      <p id="result"></p>
       <script>
-        
-        if (typeof(Storage) !== "undefined") {
+        storeIt(){
+          if (typeof(Storage) !== "undefined") {
       
-        localStorage.setItem("lastname", "Smith");
+          localStorage.setItem("lastname", "Smith");
         
-        document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-        } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+          document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+          } else {
+          document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
         }
         </script>
       
