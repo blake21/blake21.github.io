@@ -30,7 +30,8 @@
           localStorage.setItem("last", last);
           localStorage.setItem("age", age);
           localStorage.setItem("color", color);
-          document.getElementById("result").innerHTML = localStorage.getItem("lastname") + localStorage.getItem("first");
+          document.getElementById("result").innerHTML = localStorage.getItem("lastname") + localStorage.getItem("first") +
+          localStorage.getItem("last") + localStorage.getItem("age") + localStorage.getItem("color");
           } else {
           document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
           }
