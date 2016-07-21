@@ -12,17 +12,25 @@
     <p>*window.localStorage - stores data with no expiration date</p>
     <p>*window.sessionStorage - stores data for one session (data is lost when the browser tab is closed)</p>
     <h2>Local Storage Example: </h2>
-    <form action="function()">
-      First Name: <input type="text" name="first" value="Blake">
-      Last Name: <input type="text" name="last" value="Taylor">
-      Age: <input type="text" name="age" value="24">
-      Favorite Color: <input type="text" name="color" value="Blue">
+    <form action="storeIt()">
+      First Name: <input type="text" id="first" value="Blake"><br>
+      Last Name: <input type="text" id="last" value="Taylor"><br>
+      Age: <input type="text" id="age" value="24"><br>
+      Favorite Color: <input type="text" id="color" value="Blue"><br>
+      <input type="submit" value="Store in Local Storage">
       </form>
       
       <div id="example"></div>
       <script>
-        function(){
-          
+        storeIt(){
+          var first = document.getElementById("first").value;
+          var last = document.getElementById("last").value;
+          var age = document.getElementById("age").value;
+          var color =document.getElementById("color").value;
+          localStorage.setItem("firstname", first);
+          localStorage.setItem("lastname", last);
+          localStorage.setItem("age", age);
+          localStorage.setItem("color", color);
         }
       </script>
   </body>
