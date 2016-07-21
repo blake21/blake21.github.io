@@ -25,13 +25,13 @@
           var age = document.getElementById("age").value;
           var color = document.getElementById("color").value;
           
-          localStorage.setItem("lastname", "smith");
+          //localStorage.setItem("lastname", "smith");
           localStorage.setItem("first", first);
           localStorage.setItem("last", last);
           localStorage.setItem("age", age);
           localStorage.setItem("color", color);
-          document.getElementById("result").innerHTML = localStorage.getItem("lastname") + localStorage.getItem("first") +
-          localStorage.getItem("last") + localStorage.getItem("age") + localStorage.getItem("color");
+          document.getElementById("result").innerHTML =  "First Name = " + localStorage.getItem("first") + "<br> Last Name= " +
+          localStorage.getItem("last") + "<br> Age= " + localStorage.getItem("age") + "<br> Fav Color= " + localStorage.getItem("color");
           } else {
           document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
           }
