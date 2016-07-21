@@ -17,9 +17,9 @@
       Last Name: <input type="text" id="last" value="Taylor"><br>
       Age: <input type="text" id="age" value="24"><br>
       Favorite Color: <input type="text" id="color" value="Blue"><br>
-      <button onclick="storeIt()">Store in Local Storage</button>
+      <button onclick="storeIt()">Store in Local Storage</button><br>
       </form>
-      
+      <button onclick="display()">Display the Data in Local Storage</button>
       <div id="example"></div>
       <script>
         storeIt(){
@@ -31,6 +31,18 @@
           localStorage.setItem("lastname", last);
           localStorage.setItem("age", age);
           localStorage.setItem("color", color);
+        }
+      </script>
+      <script>
+        display() {
+          var firstdis = document.getElementById("result").innerHTML = localStorage.getItem("firstname");
+          var lastdis = document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+          var agedis = document.getElementById("result").innerHTML = localStorage.getItem("age");
+          var colordis = document.getElementById("result").innerHTML = localStorage.getItem("color");
+          System.out.println("First Name = " + firstdis);
+          System.out.println("Last Name = " + lastdis);
+          System.out.println("Age = " + agedis);
+          System.out.println("Favorite Color = " + colordis);
         }
       </script>
   </body>
