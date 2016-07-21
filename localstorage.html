@@ -35,11 +35,11 @@
       </script>
       <script>
         display() {
-          document.getElementById("example").innerHTML = localStorage.getItem("firstname");
+          var firstdis = document.getElementById("example").innerHTML = localStorage.getItem("firstname");
           document.getElementById("example").innerHTML = localStorage.getItem("lastname");
           document.getElementById("example").innerHTML = localStorage.getItem("age");
           document.getElementById("example").innerHTML = localStorage.getItem("color");
-          //System.out.println("First Name = " + firstdis);
+          System.out.println("First Name = " + firstdis);
           //System.out.println("Last Name = " + lastdis);
           //System.out.println("Age = " + agedis);
           //System.out.println("Favorite Color = " + colordis);
