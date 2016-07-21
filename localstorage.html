@@ -6,7 +6,6 @@
     <title>localstorage.html</title>
     <h1>Local Storage</h1>
   <body>
-    <h2>Local Storage</h2>
     <p>With local storage, web applications can store data locally within the user's browser.</p>
     <p>HTML local storage provides two objects for storing data on the client:</p?
     <p>*window.localStorage - stores data with no expiration date</p>
@@ -27,6 +26,7 @@
           var last = document.getElementById("last").value;
           var age = document.getElementById("age").value;
           var color =document.getElementById("color").value;
+          System.out.println(first + " is stored.");
           localStorage.setItem("firstname", first);
           localStorage.setItem("lastname", last);
           localStorage.setItem("age", age);
