@@ -7,39 +7,43 @@
     <h1>Local Storage</h1>
   <body>
     <p>With local storage, web applications can store data locally within the user's browser.</p>
-    <p>HTML local storage provides two objects for storing data on the client:</p?
+    <p>HTML local storage provides two objects for storing data on the client:</p>
     <p>*window.localStorage - stores data with no expiration date</p>
     <p>*window.sessionStorage - stores data for one session (data is lost when the browser tab is closed)</p>
     <h2>Local Storage Example: </h2>
-    <form>
+  
       First Name: <input type="text" id="first" value="Blake"><br>
       Last Name: <input type="text" id="last" value="Taylor"><br>
       Age: <input type="text" id="age" value="24"><br>
       Favorite Color: <input type="text" id="color" value="Blue"><br>
       <button onclick="storeIt()">Store in Local Storage</button><br>
-      </form>
-      <button onclick="display()">Display the Data in Local Storage</button>
+  
+      <button onclick="display()">Display Data in Local Storage</button>
       <div id="example"></div>
       <script>
         storeIt(){
+          if (typeof(Storage) !== "undefined") {
           var first = document.getElementById("first").value;
           var last = document.getElementById("last").value;
           var age = document.getElementById("age").value;
           var color =document.getElementById("color").value;
-          System.out.println("First = " + first);
+          
           localStorage.setItem("firstname", first);
           localStorage.setItem("lastname", last);
           localStorage.setItem("age", age);
           localStorage.setItem("color", color);
+          } else {
+          window.alert("Sorry! No Web Storage support..");
+          }
         }
       </script>
       <script>
         display() {
-          var firstdis = document.getElementById("example").innerHTML = localStorage.getItem("firstname");
+          //var firstdis = document.getElementById("example").innerHTML = localStorage.getItem("firstname");
           document.getElementById("example").innerHTML = localStorage.getItem("lastname");
-          document.getElementById("example").innerHTML = localStorage.getItem("age");
+          document.getElementById("example").innerHTML = "Age = " + localStorage.getItem("age");
           document.getElementById("example").innerHTML = localStorage.getItem("color");
-          System.out.println("First Name = " + firstdis);
+          //System.out.println("First Name = " + firstdis);
           //System.out.println("Last Name = " + lastdis);
           //System.out.println("Age = " + agedis);
           //System.out.println("Favorite Color = " + colordis);
