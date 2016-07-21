@@ -21,13 +21,15 @@
         //storeIt(){
           if (typeof(Storage) !== "undefined") {
           var first = document.getElementById("first").value;
-          //var last = document.getElementById("last").value;
-          //var age = document.getElementById("age").value;
+          var last = document.getElementById("last").value;
+          var age = document.getElementById("age").value;
+          var color = document.getElementById("color").value;
           
           localStorage.setItem("lastname", "smith");
           localStorage.setItem("first", first);
-          //localStorage.setItem("last", last);
-          //localStorage.setItem("age", age);
+          localStorage.setItem("last", last);
+          localStorage.setItem("age", age);
+          localStorage.setItem("color", color);
           document.getElementById("result").innerHTML = localStorage.getItem("lastname") + localStorage.getItem("first");
           } else {
           document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
